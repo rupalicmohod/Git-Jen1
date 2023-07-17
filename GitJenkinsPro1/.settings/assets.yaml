@@ -1,0 +1,22 @@
+name: GitJenkinsPro1
+version: 2
+projectReferences: 
+  - /We4
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /GitJenkinsPro1/src
+        type: javaClasspath
+  - name: OrangeHRMLogin.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 10.5.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE24775D05A2CBC856E33865623135
+    dependencies: 
+      - path: /We4/OrangeHRMLogin.recsession
+        type: testRecsession
+  - name: src
+    resources: 
